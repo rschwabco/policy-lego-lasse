@@ -1,0 +1,201 @@
+{
+  "property_groups": {
+    "04.01.01 Customer and Channel Management": { "Properties": [] },
+    "04.02.01 Commercial Planning and Execution": { "Properties": [] },
+    "04.03.01 Assortment and Space Management": {
+      "Properties": [
+        "Manage Distribution Report",
+        "Manage Listings",
+        "Manage Promotion Screen",
+        "View Campaign Screen"
+      ]
+    },
+    "04.03.03 Virtual Showroom": {
+      "Properties": [
+        "Access next year from mid March",
+        "Hide NIP/NEP Price",
+        "No tracking"
+      ]
+    },
+    "04.03.04 Trade Promotion Management": { "Properties": [] },
+    "07.01.05 Demand Planning (Short-Term)": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "10.21.07 Trade Promotion Effectiveness": { "Properties": [] },
+    "Access next year from mid March": {
+      "Properties": ["Access next year from mid March"]
+    },
+    "Agency": { "Properties": [] },
+    "Approval Flow for Execution and Planning": { "Properties": [] },
+    "Assortment and Space Management BU Customer Development": {
+      "Properties": []
+    },
+    "Assortment and Space Management Regional Customer Development": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Authorization": {
+      "Properties": [
+        "Manage Property Groups in 04.01.01 Customer and Channel Management",
+        "Manage Property Groups in 04.02.01 Commercial Planning and Execution",
+        "Manage Property Groups in 04.03.01 Assortment and Space Management",
+        "Manage Property Groups in 04.03.03 Virtual Showroom",
+        "Manage Property Groups in 04.03.04 Trade Promotion Management",
+        "Manage Property Groups in 07.01.05 Demand Planning (Short-Term)",
+        "Manage Property Groups in 10.21.07 Trade Promotion Effectiveness",
+        "Manage Property Groups in Authorization"
+      ]
+    },
+    "Authorization Administrator": {
+      "Properties": [
+        "Manage Property Groups in 04.01.01 Customer and Channel Management",
+        "Manage Property Groups in 04.02.01 Commercial Planning and Execution",
+        "Manage Property Groups in 04.03.01 Assortment and Space Management",
+        "Manage Property Groups in 04.03.03 Virtual Showroom",
+        "Manage Property Groups in 04.03.04 Trade Promotion Management",
+        "Manage Property Groups in 07.01.05 Demand Planning (Short-Term)",
+        "Manage Property Groups in 10.21.07 Trade Promotion Effectiveness",
+        "Manage Property Groups in Authorization"
+      ]
+    },
+    "BU Customer Development": { "Properties": [] },
+    "Brand Manager": { "Properties": ["Approve Price Point Priority"] },
+    "Business Partner": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Campaign Screen": { "Properties": ["View Campaign Screen"] },
+    "Customer": { "Properties": ["Manage Self Service"] },
+    "Customer Data": { "Properties": [] },
+    "Customer Development Manager": { "Properties": [] },
+    "Customer Hierarchy": { "Properties": [] },
+    "Demand Planner": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Demand Planning (Short-Term) KAM": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Demand Planning (Short-Term) Sales Rep": { "Properties": [] },
+    "Demand Planning (Short-Term) Trade Marketeer": { "Properties": [] },
+    "Distribution Report Manager": {
+      "Properties": ["Manage Distribution Report"]
+    },
+    "External Roles": { "Properties": ["Manage Self Service"] },
+    "Hide NPI/NEP Price": { "Properties": ["Hide NIP/NEP Price"] },
+    "Internal Access": { "Properties": [] },
+    "Internal Roles": {
+      "Properties": [
+        "Approve Price Point Priority",
+        "Manage Promotion Screen",
+        "View Campaign Screen"
+      ]
+    },
+    "KAM": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Listings Creator": { "Properties": ["Manage Listings"] },
+    "Manage 04.01.01 Customer and Channel Management": {
+      "Properties": [
+        "Manage Property Groups in 04.01.01 Customer and Channel Management"
+      ]
+    },
+    "Manage 04.02.01 Commercial Planning and Execution": {
+      "Properties": [
+        "Manage Property Groups in 04.02.01 Commercial Planning and Execution"
+      ]
+    },
+    "Manage 04.03.01 Assortment and Space Management": {
+      "Properties": [
+        "Manage Property Groups in 04.03.01 Assortment and Space Management"
+      ]
+    },
+    "Manage 04.03.03 Virtual Showroom": {
+      "Properties": ["Manage Property Groups in 04.03.03 Virtual Showroom"]
+    },
+    "Manage 04.03.04 Trade Promotion Management": {
+      "Properties": [
+        "Manage Property Groups in 04.03.04 Trade Promotion Management"
+      ]
+    },
+    "Manage 07.01.05 Demand Planning (Short-Term)": {
+      "Properties": [
+        "Manage Property Groups in 07.01.05 Demand Planning (Short-Term)"
+      ]
+    },
+    "Manage 10.21.07 Trade Promotion Effectiveness": {
+      "Properties": [
+        "Manage Property Groups in 10.21.07 Trade Promotion Effectiveness"
+      ]
+    },
+    "Manage Authorization": {
+      "Properties": ["Manage Property Groups in Authorization"]
+    },
+    "Manage Property Groups": {
+      "Properties": [
+        "Manage Property Groups in 04.01.01 Customer and Channel Management",
+        "Manage Property Groups in 04.02.01 Commercial Planning and Execution",
+        "Manage Property Groups in 04.03.01 Assortment and Space Management",
+        "Manage Property Groups in 04.03.03 Virtual Showroom",
+        "Manage Property Groups in 04.03.04 Trade Promotion Management",
+        "Manage Property Groups in 07.01.05 Demand Planning (Short-Term)",
+        "Manage Property Groups in 10.21.07 Trade Promotion Effectiveness",
+        "Manage Property Groups in Authorization"
+      ]
+    },
+    "Market Lead": { "Properties": [] },
+    "Promotion Screen": { "Properties": ["Manage Promotion Screen"] },
+    "Regional Customer Development": {
+      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+    },
+    "Trade Promotion Effectiveness Customer Facing Role": { "Properties": [] },
+    "Virtual Showroom Developer": { "Properties": ["No tracking"] },
+    "Virtual Showroom Distributor": { "Properties": [] }
+  },
+  "customer_hierarchy": {
+    "1002080": {
+      "Name": "LEGO Group",
+      "Level": "C1",
+      "cno": "1002080"
+    },
+    "1004647": {
+      "Name": "APAC",
+      "Level": "C2",
+      "cno": "1004647",
+      "Parent": "1002080"
+    },
+    "1002085": {
+      "Name": "Americas",
+      "Level": "C2",
+      "cno": "1002085",
+      "Parent": "1004647"
+    },
+    "1002086": {
+      "Name": "USA",
+      "Level": "C3",
+      "cno": "1002086",
+      "Parent": "1002085"
+    },
+    "1004576": {
+      "Name": "US Demand Planning - (TIER2)",
+      "Level": "C4",
+      "cno": "1004576",
+      "Parent": "1002086"
+    },
+    "1004577": {
+      "Name": "US DEMAND PLANNING (TIER 2)",
+      "Level": "C5",
+      "cno": "1004577",
+      "Parent": "1004576"
+    },
+    "1004578": {
+      "Name": "US DEMAND PLANNING (TIER 2)",
+      "Level": "C6",
+      "cno": "1004578",
+      "Parent": "1004577"
+    },
+    "1002084": {
+      "Name": "LEGO Education Division",
+      "Level": "C2",
+      "cno": "1002084",
+      "Parent": "1002080"
+    }
+  }
+}
