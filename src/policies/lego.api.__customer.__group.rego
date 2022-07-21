@@ -9,8 +9,8 @@ import future.keywords.every
 User := input.user
 Links := input.user.attributes.properties.Links
 
-default allow = false
-allow {
+default allowed = false
+allowed {
 
   #Check that there is a link, which grants access to the customer and properties from input:
   some i
