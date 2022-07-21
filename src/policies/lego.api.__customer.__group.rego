@@ -29,8 +29,8 @@ allow {
   }
 }
 
-get_input_properties() = input.resource.Properties {
-  input.resource.Properties
+get_input_properties() = input.resource.properties {
+  input.resource.properties
 } else = [] {
   true
 }
