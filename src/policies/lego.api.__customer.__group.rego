@@ -1,4 +1,4 @@
-package ccm
+package lego.api.__cno.__properties
 
 import data.customer_hierarchy
 import data.property_groups
