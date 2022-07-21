@@ -1,4 +1,4 @@
-package lego.api.__cno.__properties
+package ccm
 
 import data.customer_hierarchy
 import data.property_groups
@@ -8,76 +8,61 @@ import future.keywords.every
 
 User := input.user
 Links := input.user.attributes.properties.Links
-Properties := get_input_properties()
 
 default allow = false
 allow {
-  #Check that a link grants the required access:
+
+  #Check that there is a link, which grants access to the customer and properties from input:
   some i
   Link := Links[i]
 
-  # Check that the user is allowed to access this part of the hierarchy:
-	has_access_to_customer(Link, input.resource.cno)
+  link_grants_access_to_customer(Link, input.resource.cno)
+
+  check_valid_time(Link)
 
   # Check that the user has access to all the properties:
-
-  every Property in Properties {
+  every Property in get_input_properties() {
     GroupID := Link.Groups[_]
     Group := property_groups[GroupID]
+
     Group.Properties[_] == Property
   }
 }
 
-get_input_properties() = input.resource.properties {
-  input.resource.properties
+get_input_properties() = input.resource.Properties {
+  input.resource.Properties
 } else = [] {
   true
 }
 
-has_access_to_customer(Link, cno) = true {
-  Customer := Link.Customers[_]
-  is_parent(Customer, cno, customer_hierarchy)
+check_valid_time(Link) = true {
+  now := time.now_ns()
+  check_valid_from(Link, now)
+  check_valid_to(Link, now)
 } else = false {
   true
 }
 
-is_parent(ParentID, childID, hierarchy) = true {
-  ParentID == childID
+check_valid_from(Link, now) = time.parse_rfc3339_ns(from) <= now {
+  from := Link.ValidFrom
 } else = true {
-  child := hierarchy[childID]
-  is_Parent_obj(ParentID, child, hierarchy)
-} else = false {
+  # No valid from specified, so assume OK:
   true
 }
 
-# Search through levels without using recursion:
-is_Parent_obj(ParentID, child, hierarchy) = true {
-  ParentID == child.Parent
+check_valid_to(Link, now) = now <= time.parse_rfc3339_ns(to) {
+  to := Link.ValidTo
 } else = true {
-  P2 := hierarchy[child.Parent]
-  ParentID == P2.Parent
+  # No valid to specified, so assume OK:
+  true
+}
+
+link_grants_access_to_customer(Link, cno) = true {
+  # If a link is a direct match, then OK:
+  Link.Customers[_] == cno
 } else = true {
-  P2 := hierarchy[child.Parent]
-  P3 := hierarchy[P2.Parent]
-  ParentID == P3.Parent
-} else = true {
-  P2 := hierarchy[child.Parent]
-  P3 := hierarchy[P2.Parent]
-  P4 := hierarchy[P3.Parent]
-  ParentID == P4.Parent
-} else = true {
-  P2 := hierarchy[child.Parent]
-  P3 := hierarchy[P2.Parent]
-  P4 := hierarchy[P3.Parent]
-  P5 := hierarchy[P4.Parent]
-  ParentID == P5.Parent
-} else = true {
-  P2 := hierarchy[child.Parent]
-  P3 := hierarchy[P2.Parent]
-  P4 := hierarchy[P3.Parent]
-  P5 := hierarchy[P4.Parent]
-  P6 := hierarchy[P5.Parent]
-  ParentID == P6.Parent
+  # Otherwise, if a customer in Link is an ancestor to cno, then also OK:
+  customer_hierarchy[cno].Ancestors[_] == Link.Customers[_]
 } else = false {
   true
 }

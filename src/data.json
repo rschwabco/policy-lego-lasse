@@ -1,4 +1,86 @@
 {
+  "customer_hierarchy": {
+    "1002080": {
+      "Name": "LEGO Group",
+      "Level": "C1",
+      "Ancestors": []
+    },
+
+    "1004647": {
+      "Name": "APAC",
+      "Level": "C2",
+      "Ancestors": ["1002080"]
+    },
+    "1002085": {
+      "Name": "Americas",
+      "Level": "C2",
+      "Ancestors": ["1002080"]
+    },
+    "2002085": {
+      "Name": "EMEA",
+      "Level": "C2",
+      "Ancestors": ["1002080"]
+    },
+    "1002084": {
+      "Name": "LEGO Education Division",
+      "Level": "C2",
+      "Ancestors": ["1002080"]
+    },
+
+    "1002086": {
+      "Name": "USA",
+      "Level": "C3",
+      "Ancestors": ["1002080", "1002085"]
+    },
+    "1002186": {
+      "Name": "Canada",
+      "Level": "C3",
+      "Ancestors": ["1002080", "1002085"]
+    },
+    "1002286": {
+      "Name": "Brazil",
+      "Level": "C3",
+      "Ancestors": ["1002080", "1002085"]
+    },
+    "1002386": {
+      "Name": "Mexico",
+      "Level": "C3",
+      "Ancestors": ["1002080", "1002085"]
+    },
+    "1002486": {
+      "Name": "Argentina",
+      "Level": "C3",
+      "Ancestors": ["1002080", "1002085"]
+    },
+
+    "1004576": {
+      "Name": "US Demand Planning - (TIER2)",
+      "Level": "C4",
+      "Ancestors": ["1002080", "1002085", "1002086"]
+    },
+    "1004577": {
+      "Name": "US DEMAND PLANNING (TIER 2)",
+      "Level": "C5",
+      "Ancestors": ["1002080", "1002085", "1002086", "1004576"]
+    },
+    "1004578": {
+      "Name": "US DEMAND PLANNING (TIER 2)",
+      "Level": "C6",
+      "Ancestors": ["1002080", "1002085", "1002086", "1004576", "1004577"]
+    },
+    "34542333": {
+      "Name": "Good old Toy Store",
+      "Level": "C7",
+      "Ancestors": [
+        "1002080",
+        "1002085",
+        "1002086",
+        "1004576",
+        "1004577",
+        "1004578"
+      ]
+    }
+  },
   "property_groups": {
     "04.01.01 Customer and Channel Management": { "Properties": [] },
     "04.02.01 Commercial Planning and Execution": { "Properties": [] },
@@ -89,7 +171,11 @@
       ]
     },
     "KAM": {
-      "Properties": ["Manage Promotion Screen", "View Campaign Screen"]
+      "Properties": [
+        "Manage Promotion Screen",
+        "View Campaign Screen",
+        "Is Customer Facing"
+      ]
     },
     "Listings Creator": { "Properties": ["Manage Listings"] },
     "Manage 04.01.01 Customer and Channel Management": {
@@ -148,54 +234,5 @@
     "Trade Promotion Effectiveness Customer Facing Role": { "Properties": [] },
     "Virtual Showroom Developer": { "Properties": ["No tracking"] },
     "Virtual Showroom Distributor": { "Properties": [] }
-  },
-  "customer_hierarchy": {
-    "1002080": {
-      "Name": "LEGO Group",
-      "Level": "C1",
-      "cno": "1002080"
-    },
-    "1004647": {
-      "Name": "APAC",
-      "Level": "C2",
-      "cno": "1004647",
-      "Parent": "1002080"
-    },
-    "1002085": {
-      "Name": "Americas",
-      "Level": "C2",
-      "cno": "1002085",
-      "Parent": "1004647"
-    },
-    "1002086": {
-      "Name": "USA",
-      "Level": "C3",
-      "cno": "1002086",
-      "Parent": "1002085"
-    },
-    "1004576": {
-      "Name": "US Demand Planning - (TIER2)",
-      "Level": "C4",
-      "cno": "1004576",
-      "Parent": "1002086"
-    },
-    "1004577": {
-      "Name": "US DEMAND PLANNING (TIER 2)",
-      "Level": "C5",
-      "cno": "1004577",
-      "Parent": "1004576"
-    },
-    "1004578": {
-      "Name": "US DEMAND PLANNING (TIER 2)",
-      "Level": "C6",
-      "cno": "1004578",
-      "Parent": "1004577"
-    },
-    "1002084": {
-      "Name": "LEGO Education Division",
-      "Level": "C2",
-      "cno": "1002084",
-      "Parent": "1002080"
-    }
   }
 }
